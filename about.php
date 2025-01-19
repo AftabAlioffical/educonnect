@@ -1,0 +1,189 @@
+<?php
+session_start();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect</title>
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <!-- Slick css -->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="css/nice-select.css">
+
+    <!-- Nice Number css -->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+
+    <!-- Magnific Popup css -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Default css -->
+    <link rel="stylesheet" href="css/default.css">
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+   
+</head>
+
+<body>
+<?php require_once "navbar.php";  ?>
+
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about-page" class="pt-70 pb-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title mt-50">
+                        <h5>About us</h5>
+                        <h2>Welcome to EduConnect </h2>
+                    </div>
+                    <!-- section title -->
+                    <div class="about-cont">
+                        <p>EduConnect is dedicated to transforming education through collaboration and innovation. Our platform bridges the gap between traditional learning and the digital age by providing comprehensive study materials, real-time collaboration
+                            tools, and interactive features. Our mission is to empower students with the resources they need to excel academically. Join EduConnect today to enhance your learning experience and connect with peers. For assistance, contact
+                            us at [contact information].</p>
+                    </div>
+                </div>
+                <!-- about cont -->
+                <div class="col-lg-7">
+                    <div class="about-image mt-50">
+                        <img src="images/about/about-2.jpg" alt="About">
+                    </div>
+                    <!-- about imag -->
+                </div>
+            </div>
+            <!-- row -->
+            <div class="about-items pt-60">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="about-singel-items mt-30">
+                            <span>01</span>
+                            <h4>Why Choose us</h4>
+                            <p>EduConnect offers comprehensive study materials, real-time collaboration tools, and expert support to enhance your learning experience. Join a vibrant community and access top-quality educational resources to excel academically.
+                                Transform the way you learn with EduConnect.</p>
+                        </div>
+                        <!-- about singel -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="about-singel-items mt-30">
+                            <span>02</span>
+                            <h4>Our Mission</h4>
+                            <p>Our mission is to empower students by providing them with the tools and resources they need to succeed academically. We are committed to fostering a supportive and engaging learning community where every student feels valued
+                                and motivated.</p>
+                        </div>
+                        <!-- about singel -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="about-singel-items mt-30">
+                            <span>03</span>
+                            <h4>Our vission</h4>
+                            <p>At EduConnect, we believe in the power of collaboration and the transformative potential of education. Our vision is to create a dynamic and inclusive learning environment where students from all backgrounds can connect, share
+                                knowledge, and achieve their academic goals.</p>
+                        </div>
+                        <!-- about singel -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- about items -->
+        </div>
+        <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== COUNTER PART START ======-->
+
+    <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="singel-counter text-center mt-40">
+                        <span><span class="counter">200</span>+</span>
+                        <p>Users</p>
+                    </div>
+                    <!-- singel counter -->
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="singel-counter text-center mt-40">
+                        <span><span class="counter">59</span>+</span>
+                        <p>Question_Papers Uploaded</p>
+                    </div>
+                    <!-- singel counter -->
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="singel-counter text-center mt-40">
+                        <span><span class="counter">100</span>+</span>
+                        <p>Students Queries</p>
+                    </div>
+                    <!-- singel counter -->
+                </div>
+
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+
+    <!--====== COUNTER PART ENDS ======-->
+
+    <?php require_once "footer.html";  ?>
+    <!-- jquery js -->
+
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Slick js -->
+    <script src="js/slick.min.js"></script>
+
+    <!-- Magnific Popup js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Counter Up js -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- Nice Select js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+
+    <!-- Nice Number js -->
+    <script src="js/jquery.nice-number.min.js"></script>
+
+    <!-- Count Down js -->
+    <script src="js/jquery.countdown.min.js"></script>
+
+    <!-- Validator js -->
+    <script src="js/validator.min.js"></script>
+
+    <!-- Ajax Contact js -->
+    <script src="js/ajax-contact.js"></script>
+
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

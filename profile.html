@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <!-- Slick css -->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="css/nice-select.css">
+
+    <!-- Nice Number css -->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+
+    <!-- Magnific Popup css -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Default css -->
+    <link rel="stylesheet" href="css/default.css">
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- NAVBAR SCRIPT -->
+    <script>
+        $(function() {
+            $('#nav').load("navbar.html");
+        });
+    </script>
+    <!-- FOOTER SCRIPT -->
+    <script>
+        $(function() {
+            $('#footer').load("footer.html");
+        });
+    </script>
+    <!-- CSS for styling -->
+    <style>
+        .profile-container {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        
+        .profile-info-container {
+            margin-left: 20px;
+        }
+        
+        .profile-info-container h2 {
+            margin-bottom: 10px;
+        }
+        
+        .edit-profile-btn {
+            margin-top: 10px;
+        }
+        
+        .modal-body img {
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div id="nav"></div>
+
+    <!-- Profile Section -->
+    <div class="container mt-5">
+        <div class="profile-container">
+            <img src="images/all-icon/man-user-circle-icon.png" alt="Profile Picture" class="profile-pic" id="profilePic">
+            <div class="profile-info-container">
+                <h2>John Doe</h2>
+                <!-- Hardcoded User Name -->
+                <p>john.doe@example.com</p>
+                <!-- Hardcoded Email -->
+                <p>+1234567890</p>
+                <!-- Hardcoded Phone -->
+                <p>123 Main St, City, Country</p>
+                <!-- Hardcoded Address -->
+                <button class="btn btn-info edit-profile-btn" data-toggle="modal" data-target="#editProfileModal">Edit Profile</button>
+            </div>
+        </div>
+
+        <!-- User Activity Section -->
+        <div class="row activity-table mt-5">
+            <div class="col-12">
+                <h3>User Activity History</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Query</th>
+                            <th>Asked On</th>
+                            <th>Answers</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activityTableBody">
+                        <!-- Hardcoded user activity rows -->
+                        <tr>
+                            <td>How to learn JavaScript?</td>
+                            <td>2024-07-01</td>
+                            <td>5</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+                                <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best practices for React?</td>
+                            <td>2024-07-02</td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+                                <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>What is AJAX?</td>
+                            <td>2024-07-03</td>
+                            <td>4</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+                                <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="profileForm">
+                        <div class="form-group text-center">
+                            <img src="images/all-icon/man-user-circle-icon.png" alt="Profile Picture" class="profile-pic" id="modalProfilePic">
+                            <div class="custom-file mt-3">
+                                <input type="file" class="custom-file-input" id="fileInput" accept="image/*">
+                                <label class="custom-file-label" for="fileInput">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" value="John Doe">
+                            <!-- Hardcoded Name -->
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" value="john.doe@example.com">
+                            <!-- Hardcoded Email -->
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" value="+1234567890">
+                            <!-- Hardcoded Phone -->
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" value="123 Main St, City, Country">
+                            <!-- Hardcoded Address -->
+                        </div>
+                        <button type="submit" class="btn btn-success">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript includes -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="footer"></div>
+    <!-- jquery js -->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Slick js -->
+    <script src="js/slick.min.js"></script>
+
+    <!-- Magnific Popup js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Counter Up js -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- Nice Select js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+
+    <!-- Nice Number js -->
+    <script src="js/jquery.nice-number.min.js"></script>
+
+    <!-- Count Down js -->
+    <script src="js/jquery.countdown.min.js"></script>
+
+    <!-- Validator js -->
+    <script src="js/validator.min.js"></script>
+
+    <!-- Ajax Contact js -->
+    <script src="js/ajax-contact.js"></script>
+
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
